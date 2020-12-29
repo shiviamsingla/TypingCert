@@ -74,10 +74,10 @@ function updateImage(lessonId){
 }
 /*Events*/
 document.getElementById('lessonId1').onclick = () => {
-	document.location = 'file:///E:/PUP%20Data/sem-V/html/practicle/TypingCert/intro-one.html';
+	document.location = 'https://shiviamsingla.github.io/TypingCert/intro-one.html';
 };
 document.getElementById('lessonId2').onclick = () => {
-	document.location = 'file:///E:/PUP%20Data/sem-V/html/practicle/TypingCert/intro-two.html';
+	document.location = 'https://shiviamsingla.github.io/TypingCert/intro-two.html';
 };
 for(let i=3;i<=14;i++){
 	document.getElementById(`lessonId${i}`).onclick = () => {
