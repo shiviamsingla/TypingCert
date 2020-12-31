@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TypingCert</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TypingCert helps you to increase your typing speed. you can learn, test your speed.">
+    <meta name="author" content="shiviam singla">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TypingCert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#test">Take Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tutorials">Typing Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<section class="container-fluid" id="main">
+	<div class="row p-2" id="main-section">
+		<div class="col-12 col-sm-6 col-md-6 p-2 d-flex align-items-center">
+			<div><img src="banner1.png" id="banner1"></div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-6 p-3 d-flex flex-column justify-content-center">
+			<h1>TypingCert</h1>
+			<p>Type Like a Professional. Don't know how??? we will help you. take some tutorials and tests. Remember, practice make perfect.</p>
+			<div class="p-1"><button class="btn"><a href="#test">Take a test</a></button></div>
+			<div>
+				<form class="p-2 mt-5" id="subscribe-form">
+					<p class="form-text text-center">Subscribe us to get Typing tips and updates.</p>
+					<input type="email" name="email" class="form-control mb-2" placeholder="email@example.com">
+					<button type="submit" class="form-control">Subscribe Us</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="test" class="container">
+	<h1 class="text-center p-3">Take a Test</h1>
+	<div class="card p-2">
+		<p class="form-text p-2 mb-2" id="lessonArea"></p>
+		<input type="text" class="form-control mb-2" name="user-input" id="user-input" placeholder="Start typing Here..." autocomplete="false">
+	</div>
+	<button class="btn m-1" id="test-submit">Start Test</button>
+	<button class="btn m-1" id="loadLessonButton">Reset</button>
+	<select class="btn m-1" id="test-time">
+		<option>1 Minute</option>
+		<option>2 Minute</option>
+		<option>5 Minute</option>
+	</select>
+	<!-- MODEL START -->
+	<div class="modal fade" id="result" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Statistics</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- MODEL END -->
+</section>
+<section id="tutorials" class="container">
+	<h1 class="text-center p-3">Typing Lessons</h1>
+	<div class="row" id="tut-box">
+		<p id="tut-heading">Introduction Lessons</p>
+		<div class="col" id="lessonId1">
+			<img src="time.png" class="tut-num" id="lessonId1Image"><br>
+		Intro(1)</div>
+		<!-- finger position -->
+		<div class="col" id="lessonId2">
+			<img src="time.png" class="tut-num" id="lessonId2Image"><br>
+		Intro(2)</div>
+		<!-- tips before starting -->
+	</div>
+	<div class="row" id="tut-box">
+		<p id="tut-heading">Basic Lessons</p>
+		<div class="col" id="lessonId3">
+			<img src="time.png" class="tut-num" id="lessonId3Image"><br>
+		Basic(1)</div>
+		<!-- asdf jkl; -->
+		<div class="col" id="lessonId4">
+			<img src="time.png" class="tut-num" id="lessonId4Image"><br>
+		Basic(2)</div>
+		<!-- ASDF JKL: -->
+		<div class="col" id="lessonId5">
+			<img src="time.png" class="tut-num" id="lessonId5Image"><br>
+		Basic(3)</div>
+		<!-- asdfghjkl; -->
+		<div class="col" id="lessonId6">
+			<img src="time.png" class="tut-num" id="lessonId6Image"><br>
+		Basic(4)</div>
+		<!-- ASDFGHJKL: -->
+		<div class="col" id="lessonId7">
+			<img src="time.png" class="tut-num" id="lessonId7Image"><br>
+		Basic(5)</div>
+		<!-- qwer uiop -->
+		<div class="col" id="lessonId8">
+			<img src="time.png" class="tut-num" id="lessonId8Image"><br>
+		Basic(6)</div>
+		<!-- QWER UIOP -->
+		<div class="col" id="lessonId9">
+			<img src="time.png" class="tut-num" id="lessonId9Image"><br>
+		Basic(7)</div>
+		<!-- qwertyuiop -->
+		<div class="col" id="lessonId10">
+			<img src="time.png" class="tut-num" id="lessonId10Image"><br>
+		Basic(8)</div>
+		<!-- QWERTYUIOP -->
+		<div class="col" id="lessonId11">
+			<img src="time.png" class="tut-num" id="lessonId11Image"><br>
+		Basic(9)</div>
+		<!-- zxcv m,./ -->
+		<div class="col" id="lessonId12">
+			<img src="time.png" class="tut-num" id="lessonId12Image"><br>
+		Basic(10)</div>
+		<!-- ZXCV M<>? -->
+		<div class="col" id="lessonId13">
+			<img src="time.png" class="tut-num" id="lessonId13Image"><br>
+		Basic(11)</div>
+		<!-- zxcvbnm,./ -->
+		<div class="col" id="lessonId14">
+			<img src="time.png" class="tut-num" id="lessonId14Image"><br>
+		Basic(12)</div>
+		<!-- ZXCVBNM<>? -->
+	</div>
+	<div class="row" id="tut-box">
+		<p id="tut-heading">Random Lessons</p>
+		<!-- ALL KEYS Tutorials -->
+		<div class="col" id="lessonId15">
+			<img src="time.png" class="tut-num" id="lessonId15Image"><br>
+			Random (1)
+		</div>
+		<div class="col" id="lessonId16">
+			<img src="time.png" class="tut-num" id="lessonId16Image"><br>
+			Random (2)
+		</div>
+		<div class="col" id="lessonId17">
+			<img src="time.png" class="tut-num" id="lessonId17Image"><br>
+			Random (3)
+		</div>
+		<div class="col" id="lessonId18">
+			<img src="time.png" class="tut-num" id="lessonId18Image"><br>
+			Random (4)
+		</div>
+		<div class="col" id="lessonId19">
+			<img src="time.png" class="tut-num" id="lessonId19Image"><br>
+			Random (5)
+		</div>
+		<div class="col" id="lessonId20">
+			<img src="time.png" class="tut-num" id="lessonId20Image"><br>
+			Random (6)
+		</div>
+	</div>
+	<div class="row" id="tut-box">
+		<p id="tut-heading">Advance Lessons</p>
+		<!-- ALL KEYS Tutorials -->
+		<div class="col" id="lessonId21">
+			<img src="time.png" class="tut-num" id="lessonId21Image"><br>
+			Advance(1)
+		</div>
+		<div class="col" id="lessonId22">
+			<img src="time.png" class="tut-num" id="lessonId22Image"><br>
+			Advance(2)
+		</div>
+		<div class="col" id="lessonId23">
+			<img src="time.png" class="tut-num" id="lessonId23Image"><br>
+			Advance(3)
+		</div>
+		<div class="col" id="lessonId24">
+			<img src="time.png" class="tut-num" id="lessonId24Image"><br>
+			Advance(4)
+		</div>
+	</div>
+</section>
+<section class="container" id="contact-us">
+	<h1 class="text-center p-3">Contact Us</h1>
+	<p>
+		TypingCert is designed by 
+		<a href="https://shiviamsingla.github.io" target="_blank">Shiviam Singla</a>. you can contact me through
+		<a href="mailto:shiviamsingla@gmail.com">Email</a>. Do not forget to subscribe us to get updates about TypingCert. <!-- Follow TypingCert on Facebook, twitter and Instagram. Thanks for visit. -->
+	</p>
+</section>
+<footer class="container-fluid p-3 text-center">
+	&copy 2020-21 Created with ♥ by ShiviamSingla
+</footer>
+<!-- SCRIPT Inclusion START -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="lessonEvents.js"></script>
+<!-- SCRIPT Inclusion END -->
+</body>
+</html>

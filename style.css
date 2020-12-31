@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
+body{
+	padding-top: 55px;
+	background-color: #00022E;
+}
+*{
+	color: #FDDC5C !important;
+	box-shadow: none !important;
+}
+p,li{
+	font-family: 'Roboto Slab', serif;
+}
+.navbar, .modal-content{
+	background-color: #00022E;
+}
+.nav-link{
+	font-family: 'Nova Flat', cursive;
+}
+#subscribe-form{
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+#subscribe-form .form-control{
+	width: 70%;
+	color: #FF073A !important;
+}
+/*#main{
+	height: calc(100vh - 55px);
+}*/
+h1, .navbar-brand{
+	font-family: 'Langar', cursive;
+}
+button, .btn{
+	border: none;
+	box-shadow: 1px 1px 1px black !important;
+	background-color: #FDDC5C !important;
+}
+button, .btn a, .navbar-toogle, option, select{
+	color: #FF073A !important;
+	text-decoration: none;
+	font-family: 'Nova Flat', cursive;
+}
+#main-section{
+	background-image: linear-gradient(80deg,#00022E, #02066F, #00022E);
+}
+#banner1{
+	max-width: 100%;
+}
+#test{
+	font-size: 25px;
+}
+.card{
+	background-image: linear-gradient(180deg,#00022E,#FF073A,#00022E);
+}
+#lessonArea{
+	max-height: 60vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-weight: bold;
+}
+#user-input{
+	background-color: transparent;
+	border: 0px;
+	border-radius: 0px;
+	border-bottom: 1px solid #FDDC5C;
+	color: #FDDC5C !important;
+}
+#tutorials .col{
+	width: 100%;
+	height: 80px;
+	background-color: #FDDC5C;
+	margin: 3px;
+	color: #FF073A !important;
+	text-align: center;
+}
+.tut-num{
+	height:50px;
+}
+#tut-box{
+	border: 2px solid #FF073A;
+	margin-top: 4px;
+}
+#tut-heading{
+	background-color: #FF073A;
+	display: block;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px black;
+	padding: 3px;
+	padding-left: 20px;
+}
+#contact-us a{
+	color:#FF073A !important;
+	text-decoration: none;
+}
+.rightType{
+	color: green;
+}
+.wrongType{
+	color: black;
+}
+[id^="lessonId"]{
+	cursor: pointer;
+}
+/*Design for Intro Pages*/
+#intro-topic{
+	background-image: linear-gradient(90deg,black,transparent,transparent);
+	padding: 5px;
+	margin-top: 10px;
+}
+table{
+	display: block;
+	max-width: 100%;
+	overflow-x: scroll;
+}
+table *{
+	border: 1px solid #FDDC5C;
+	text-align: center;
+}
+table #middle{
+	background-color: #FF073A;
+}
+table td{
+	text-transform: uppercase;
+}
