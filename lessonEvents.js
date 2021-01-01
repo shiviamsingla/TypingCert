@@ -16,12 +16,12 @@ var lesson14Data = 'Zx cV Bn m< >/ zX Cv bN M, .? Vc vB Vc vB M, mN M, mN Vc vB 
 /*BASIC LESSONS END*/
 /*RANDOM LESSONS START*/
 var fourPairs = ['asdf','jkl;','ghgh','asfj','jkhl','l;as','lksd','jhfg','gah;','qwer','uiop','tyty','qwru','uiyo','opqw','oiwe','ytrt','tqyp','zxcv','m,./','bnbn','zxvm','m,n.','./zx','.,xc','mnvb','bzn/'];
-var lesson15Data = '';
-var lesson16Data = 'as as df df l; l; jk jk as as df df l; l; jk jk as df as df jk l; jk l; as df jk l; jk l;';
-var lesson17Data = 'as as df df l; l; jk jk as as df df l; l; jk jk as df as df jk l; jk l; as df jk l; jk l;';
-var lesson18Data = 'as as df df l; l; jk jk as as df df l; l; jk jk as df as df jk l; jk l; as df jk l; jk l;';
-var lesson19Data = 'as as df df l; l; jk jk as as df df l; l; jk jk as df as df jk l; jk l; as df jk l; jk l;';
-var lesson20Data = 'as as df df l; l; jk jk as as df df l; l; jk jk as df as df jk l; jk l; as df jk l; jk l;';
+var lesson15Data = ''; //fourPairs
+var lesson16Data = ''; //fourPairs
+var lesson17Data = ''; //reqSender
+var lesson18Data = ''; //reqSenderPbi
+var lesson19Data = ''; //fourPairs
+var lesson20Data = ''; //fourPairs
 /*RANDOM LESSONS END*/
 var lesson21Data = `This is a simple lesson to type. Hii how are you???
 Hope you all are fine. I just want you to type fast,
@@ -33,6 +33,28 @@ var lesson23Data = "Thanks for choice this link,and welcome to you in our this w
 var lesson24Data = `In the American restaurants they call for 'Toasted English', referring to English muffins which though begin made in America, now retain 'English'as a sort of concession to their origin. The same may be said of their language too. Americans too went through a phase of throwing out the British but retaining their language and letting it flourish on American soil; the resultant language is somewhat different from its British counterpart; it may be said to have gone thourgh a process of toasting. One noticeable result of this toasting is that much of the formalism surrounding the use of English has been abandoned. 
 In America, they have freed the language from the stifling tyranny of the Passive Voice. Where we should say ceremoniously 'Trespassing prohibited', their signboards, as I noticed in the Parks or Berkeley, merely say, 'Newly planted, don't walk'. 'Absolutely No Parking' leaves no room for speculation, and no motorist need spend too much peeringf out and studying the notice. In a smiliar situation our authorities are likely to plant a twenty-line inscription on the landscape to say, 'Under Municipal Act so and so of the Motorist Vehicles Act, etc. etc.' I saw on many American office doors just 'Do not Enter'. The traffic signs at pedestrain crossings never mince words; they just say 'Go', or 'wait'. In a Hollywood studio I was rather startled to read, 'Mark Stevens - Keep out'. Mark Stevens is a busy television personality who does not like to be disturbed by visitors. Incidentally, it left me wondering why, if Mr Stevens does not like interruption, he should announce his name at all on the door! But is one of the minor mysteries that make travel though that country so engrossing.`;
 /*LESSON DATA END*/
+function reqSender(){
+	let num = Math.floor((Math.random() * 2) + 1);
+	let req = fetch(`https://words-api-typingcert.herokuapp.com/words.php?no=${num}`)
+	.then(res => res.json())
+	.then(data => {
+		lesson17Data = shuffleArray(data).join(' ');
+		alert('Your Lesson is Loaded\nGood Luck...');
+		loadLesson(2); //passing default 1 mint (because it's double)
+	});
+}
+function reqSenderPbi(){
+	let num = Math.floor((Math.random() * 2) + 1);
+	var req = fetch(`https://words-api-typingcert.herokuapp.com/punjabi_words.php?no=${num}`)
+	.then(res => res.text())
+	.then(data => {
+		console.log(typeof data);
+		data = data.split(' ');
+		alert('Your Lesson is Loaded\nGood Luck...');
+		lesson18Data = shuffleArray(data).join(' ');
+		loadLesson(2); //passing default 1 mint (because it's double)
+	});
+}
 /*EXTRA FUNCTIONS START*/
 function shuffleArray(array2) {
 	let array = [...array2];
@@ -101,15 +123,11 @@ document.getElementById('lessonId16').onclick = () => {
 };
 document.getElementById('lessonId17').onclick = () => {
 	lessonId = 17;
-	lesson17Data = shuffleArray(fourPairs).join(' ');
-	alert('Your Lesson is Loaded\nGood Luck...');
-	loadLesson(2); //passing default 1 mint (because it's double)
+	reqSender(); // to update meaningWords
 };
 document.getElementById('lessonId18').onclick = () => {
 	lessonId = 18;
-	lesson18Data = shuffleArray(fourPairs).join(' ');
-	alert('Your Lesson is Loaded\nGood Luck...');
-	loadLesson(2); //passing default 1 mint (because it's double)
+	reqSenderPbi(); // to update meaningWords
 };
 document.getElementById('lessonId19').onclick = () => {
 	lessonId = 19;

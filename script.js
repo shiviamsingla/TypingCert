@@ -105,13 +105,14 @@ function loadLesson(minute) {
 	}
 	else{
 	//data fetching
-	let postNum = Math.floor((Math.random() * 99) + 1);
-	fetch(`https://jsonplaceholder.typicode.com/posts/${postNum}`)
+	let postNum = Math.floor((Math.random() * 1) + 1);
+	fetch(`https://words-api-typingcert.herokuapp.com/paragraphs.php?no=${postNum}`)
 	.then(res => res.json())
 	.then(data => {
 		resetThings(minute);
 		//new lesson
-		data = data['body'].replaceAll('\n',' ');
+		data = data[Math.floor((Math.random() * 9) + 1)];
+		data = data.replaceAll('\n',' ');
 		data = data.repeat(minute);
 		readyLesson(data);
 	});
